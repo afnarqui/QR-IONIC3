@@ -206,7 +206,7 @@ export class HomePage {
      this.mostrarToast('correo enviado con exito..')
   }
   ///+scannedCode+
-  enviarcorreo2(scannedCode: any){
+  enviarcorreo2(){
     let htmlLInk = "MATMSG:TO:afnarqui9@gmail.com;SUB:aja aja;BODY:dsfadfs;;";
     
     htmlLInk = htmlLInk.replace("MATMSG:TO:","mailto:");
