@@ -19,6 +19,7 @@ export class HomePage {
   scannedCode = null;
   nits: any[] = [];
   correo: any[] = [];
+  cordova:any;
   constructor(private barcodeScanner: BarcodeScanner,
               private toastController:ToastController,
               private platform:Platform,
@@ -207,6 +208,18 @@ export class HomePage {
   }
   ///+scannedCode+
   enviarcorreo2(createdCode:any){
+
+
+    this.cordova.plugins.pdf.htmlToPDF({
+      data: "<html> <h1>  Hello World  </h1> </html>",
+      documentSize: "A4",
+      landscape: "portrait",
+      type: "base64"
+  },
+  (sucess) => console.log('sucess: ', sucess),
+  (error) => console.log('error:', error));
+
+
     let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA "+createdCode+" ;;";
     this.mostrarToast(htmlLInk);
     ///MATMSG:TO
