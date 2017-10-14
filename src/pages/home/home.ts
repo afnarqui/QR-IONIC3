@@ -30,26 +30,7 @@ export class HomePage {
               public emailComposer:EmailComposer,
               public NitsServices:nitsServices,
               public iab:InAppBrowser,
-              public navCtrl: NavController) { 
-
-             
-                const before = Date.now();
-          
-                      
-                this.mostrarToast('DEVICE READY FIRED AFTER'  + before + 'ms')
-          
-                          this.cordova.plugins.pdf.htmlToPDF({
-                                  data: "<html> <h1>  Hello World  </h1> </html>",
-                                  documentSize: "A4",
-                                  landscape: "portrait",
-                                  type: "base64"
-                              },
-                              (sucess) => this.mostrarToast('sucess: '+ sucess),
-                              (error) => (sucess) => this.mostrarToast('error : '+ sucess))
-                   
-          
-             
-            }
+              public navCtrl: NavController) {}
             
             
 
@@ -193,6 +174,22 @@ export class HomePage {
    this.correo.push(
     {correo: 'afnarqui9@gmail.com'}
   )
+
+  const before = Date.now();
+  
+              
+        this.mostrarToast('DEVICE READY FIRED AFTER'  + before + 'ms')
+  
+                  this.cordova.plugins.pdf.htmlToPDF({
+                          data: "<html> <h1>  Hello World  </h1> </html>",
+                          documentSize: "A4",
+                          landscape: "portrait",
+                          type: "base64"
+                      },
+                      (sucess) => this.mostrarToast('sucess: '+ sucess),
+                      (error) => (sucess) => this.mostrarToast('error : '+ sucess))
+
+                      
   }  
 
   enviarCorreo(data: any) {
