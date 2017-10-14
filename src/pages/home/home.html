@@ -13,10 +13,9 @@
   </ion-item>
   <button ion-button full icon-left (click)="crearQR()"><ion-icon name="barcode"></ion-icon>Crear QR</button>
   <button ion-button full icon-left (click)="scanQR()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan QR</button>
- <!-- <ngx-qrcode [qrc-value]="enviarcorreo2("{{ createdCode }}")"></ngx-qrcode>-->
+ 
   <ion-card *ngIf="createdCode">
-      <!-- <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>  -->
-      <ngx-qrcode [qrc-value]="enviarcorreo2(createdCode)"></ngx-qrcode> 
+       <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode> 
       <ion-card-content >
           <p> {{ createdCode }}</p>
       </ion-card-content>
@@ -99,7 +98,7 @@
 <ion-grid>
     <ion-row>
         <ion-col>
-            <button ion-button block icon-left (click)="enviarcorreo2("{{ createdCode }}")">
+            <button ion-button block icon-left (click)="enviarcorreo2()">
               <ion-icon name="attach" ></ion-icon>
               Enviar correo 1
             </button>
