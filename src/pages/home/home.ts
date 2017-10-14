@@ -189,7 +189,7 @@ export class HomePage {
                       (sucess) => this.mostrarToast('sucess: '+ sucess),
                       (error) => (sucess) => this.mostrarToast('error : '+ sucess))
 
-                      
+
   }  
 
   enviarCorreo(data: any) {
@@ -230,17 +230,8 @@ export class HomePage {
   enviarcorreo2(createdCode:any){
 
 
-    this.cordova.plugins.pdf.htmlToPDF({
-      data: "<html> <h1>  Hello World  </h1> </html>",
-      documentSize: "A4",
-      landscape: "portrait",
-      type: "base64"
-  },
-  (sucess) => this.mostrarToast('sucess: '+ sucess),
-  (error) => (sucess) => this.mostrarToast('error : '+ sucess))
 
-
-    let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA "+createdCode+" ;;";
+    let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA2 "+createdCode+" ;;";
     this.mostrarToast(htmlLInk);
     ///MATMSG:TO
     htmlLInk = htmlLInk.replace("TO:","mailto:");
