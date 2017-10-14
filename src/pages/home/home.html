@@ -1,18 +1,100 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="primary">
+      <ion-title>
+          Realizar Scan
+      </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    esta es la prueba de que la app se deja desplegar
+  <ion-item>
+      <ion-input type="text" placeholder="Ingrese información" [(ngModel)]="qrData">
+      </ion-input>
+  </ion-item>
+  <button ion-button full icon-left (click)="crearQR()"><ion-icon name="barcode"></ion-icon>Crear QR</button>
+  <button ion-button full icon-left (click)="scanQR()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan QR</button>
 
-    afn
-  </p>
+  <ion-card *ngIf="createdCode">
+      <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+      <ion-card-content>
+          <p> {{ createdCode }}</p>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="scannedCode">
+      <ion-card-content>
+          {{ scannedCode }}
+      </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+      <ion-row>
+          <ion-col>
+              <button ion-button block icon-left (click)="openAlertNewNits()">
+                <ion-icon name="attach" ></ion-icon>
+                Guardar nits
+              </button>
+          </ion-col>
+      </ion-row>
+
+      <!-- <ion-row>
+          <ion-col>
+              <button ion-button block icon-left (click)="openAlertNewTask()">
+                <ion-icon name="add-circle" ></ion-icon>
+                Agregar
+              </button>
+          </ion-col>
+      </ion-row> -->
+      
+      
+  </ion-grid>
+
+
+
+  <!-- <ion-buttons right>
+      <button ion-button icon-only (click)="openAlertNewTask()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+    
+  <!-- <ion-list>
+      <ion-item *ngIf="tareas.length == 0"> 
+        Empty
+      </ion-item>
+     <ion-item-sliding *ngFor="let task of tareas; let i = index">
+       <ion-item >
+         <ion-label>{{ task.title }}</ion-label>
+         <ion-checkbox (ionChange)="updateTask( task, i )" [checked]="task.completed"></ion-checkbox>
+       </ion-item>
+       <ion-item-options side="right" icon-left>
+         <button ion-button color="danger" (click)="deleteTask(task, i)">
+           <ion-icon name="trash"></ion-icon>
+           Delete
+         </button>
+       </ion-item-options>
+     </ion-item-sliding>
+   </ion-list> -->
+
+   <ion-list>
+      <ion-item *ngIf="nits.length == 0"> 
+        No existen registros...
+      </ion-item>
+     <ion-item-sliding *ngFor="let nit of nits; let i = index">
+       <ion-item >
+         <ion-label>{{ nit.nombreintegrado }}</ion-label>
+         <ion-label>{{ nit.correo }}</ion-label>
+         <ion-checkbox (ionChange)="updateNits( nits, i )" [checked]="nit.completed"></ion-checkbox>
+       </ion-item>
+       <ion-item-options side="right" icon-left>
+         <button ion-button color="danger" (click)="deleteNits(nits, i)">
+           <ion-icon name="trash"></ion-icon>
+           Delete
+         </button>
+       </ion-item-options>
+     </ion-item-sliding>
+   </ion-list>     
+
+
+
 </ion-content>
