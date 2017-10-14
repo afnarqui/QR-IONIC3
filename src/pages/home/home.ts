@@ -216,8 +216,8 @@ export class HomePage {
       landscape: "portrait",
       type: "base64"
   },
-  (sucess) => console.log('sucess: ', sucess),
-  (error) => console.log('error:', error));
+  (sucess) => this.mostrarToast('sucess: '+ sucess),
+  (error) => (sucess) => this.mostrarToast('error : '+ sucess))
 
 
     let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA "+createdCode+" ;;";
