@@ -245,21 +245,15 @@ export class HomePage {
       navigationView : {
           closeLabel : 'start'
       },
-      email : {
-          enabled : false
-      },
+
       print : {
           enabled : true
       },
-      openWith : {
-          enabled : false
-      },
+
       bookmarks : {
           enabled : true
-      },
-      search : {
-          enabled : false
       }
+
   }
   
     this.mostrarToast('antes del pdf')
