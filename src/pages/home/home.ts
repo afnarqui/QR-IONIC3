@@ -35,8 +35,8 @@ export class HomePage {
              
                 const before = Date.now();
           
-                      document.addEventListener('deviceready', () => {
-                          console.log('DEVICE READY FIRED AFTER', (Date.now() - before), 'ms');
+                      
+                this.mostrarToast('DEVICE READY FIRED AFTER'  + before + 'ms')
           
                           this.cordova.plugins.pdf.htmlToPDF({
                                   data: "<html> <h1>  Hello World  </h1> </html>",
@@ -46,7 +46,7 @@ export class HomePage {
                               },
                               (sucess) => this.mostrarToast('sucess: '+ sucess),
                               (error) => (sucess) => this.mostrarToast('error : '+ sucess))
-                      });
+                   
           
              
             }
