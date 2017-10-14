@@ -18,6 +18,7 @@ export class HomePage {
   createdCode = null;
   scannedCode = null;
   nits: any[] = [];
+  correo: any[] = [];
   constructor(private barcodeScanner: BarcodeScanner,
               private toastController:ToastController,
               private platform:Platform,
@@ -164,6 +165,9 @@ export class HomePage {
   // }  
   ionViewDidLoad(){  
    this.getAllNits();
+   this.correo.push(
+    {correo: 'afnarqui9@gmail.com'}
+  )
   }  
 
   enviarCorreo(data: any) {

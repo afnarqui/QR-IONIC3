@@ -98,7 +98,7 @@
 <ion-grid>
     <ion-row>
         <ion-col>
-            <button ion-button block icon-left>
+            <button ion-button block icon-left (click)="enviarCorreo(correo)">
               <ion-icon name="attach" ></ion-icon>
               Enviar correo
             </button>
@@ -109,7 +109,7 @@
    <!-- <ion-grid>
     <ion-row>
         <ion-col>
-            <button ion-button block icon-left (click)="enviarCorreo("[{correo:"afnarqui9@gmail.com"}]")">
+            <button ion-button block icon-left (click)="enviarCorreo(correo)">
               <ion-icon name="attach" ></ion-icon>
               Enviar correo
             </button>
