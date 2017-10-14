@@ -21,6 +21,7 @@ export class HomePage {
   scannedCode = null;
   nits: any[] = [];
   correo: any[] = [];
+  opciones: any[] = [];
   public cordova:any;
     
 
@@ -235,15 +236,41 @@ export class HomePage {
   }
   ///+scannedCode+
   enviarcorreo2(createdCode:any){
-
+    this.opciones = [{
+      title: "valores",
+      documentView : {
+          closeLabel : 'Done'
+      },
+      navigationView : {
+          closeLabel : 'Close'
+      },
+      email : {
+          enabled : true
+      },
+      print : {
+          enabled : false
+      },
+      openWith : {
+          enabled : false
+      },
+      bookmarks : {
+          enabled : true
+      },
+      search : {
+          enabled : false
+      }
+  }];
 
     this.mostrarToast('antes del pdf')
-    this.document.viewDocument('assets/myFile.pdf', 'application/pdf', {"title":"nose funcione"})
+    this.document.viewDocument('assets/myFile.pdf', 'application/pdf', 
+        this.newFunction()
+  
+    )
     this.mostrarToast('despues del pdf pdf')
 
     
 
-
+   
     // let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA2 "+createdCode+" ;;";
     // this.mostrarToast(htmlLInk);
     // ///MATMSG:TO
@@ -258,4 +285,8 @@ export class HomePage {
     // this.iab.create( htmlLInk, "_system");
   }
 
+
+    private newFunction(): DocumentViewerOptions {
+        return this.opciones;
+    }
 }
