@@ -207,9 +207,10 @@ export class HomePage {
   }
   ///+scannedCode+
   enviarcorreo2(){
-    let htmlLInk = "MATMSG:TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA;;";
-    
-    htmlLInk = htmlLInk.replace("MATMSG:TO","mailto:");
+    let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA;;";
+    this.mostrarToast(htmlLInk);
+    ///MATMSG:TO
+    htmlLInk = htmlLInk.replace("TO","mailto:");
     htmlLInk = htmlLInk.replace(";SUB:", "?subject=");
     htmlLInk = htmlLInk.replace(";BODY:", "&body=");
     htmlLInk = htmlLInk.replace(";;", "");
