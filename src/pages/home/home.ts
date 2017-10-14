@@ -172,7 +172,7 @@ export class HomePage {
 
   enviarCorreo(data: any) {
     this.emailComposer.isAvailable().then((available: boolean) =>{
-    
+      this.mostrarToast('sin hacer nada: ' + this.correo)
       if(available) {
         this.mostrarToast('se puede mandar enviado con exito..')
         let correo = JSON.stringify(data[0].correo)
