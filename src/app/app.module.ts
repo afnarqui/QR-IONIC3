@@ -20,7 +20,7 @@ import { HttpModule } from '@angular/http';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { nitsServices } from '../servicios/nits.services';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-
+import { DocumentViewer,DocumentViewerOptions} from '@ionic-native/document-viewer';
 
 
 @NgModule({
@@ -50,7 +50,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
     EmailComposer,
     nitsServices,
     InAppBrowser,
-    
+    DocumentViewer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner,
     BdServiceProvider

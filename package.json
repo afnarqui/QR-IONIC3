@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "4.4.3",
     "@ionic-native/barcode-scanner": "^4.3.1",
     "@ionic-native/core": "4.3.0",
+    "@ionic-native/document-viewer": "^4.3.1",
     "@ionic-native/email-composer": "^4.3.1",
     "@ionic-native/file": "^4.2.1",
     "@ionic-native/file-chooser": "^4.2.1",
@@ -37,6 +38,7 @@
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-console": "^1.0.5",
     "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-document-viewer": "^0.9.5",
     "cordova-plugin-email-composer": "^0.8.10",
     "cordova-plugin-file": "^4.0.0",
     "cordova-plugin-file-transfer": "^1.6.3",
@@ -79,11 +81,11 @@
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {}
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-document-viewer": {}
     },
     "platforms": [
       "android"
     ]
   }
 }
-

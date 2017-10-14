@@ -8,6 +8,7 @@ import { nitsServices } from '../../servicios/nits.services';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { NavController } from 'ionic-angular';
+import { DocumentViewer,DocumentViewerOptions } from '@ionic-native/document-viewer';
 
 
 @Component({
@@ -21,6 +22,8 @@ export class HomePage {
   nits: any[] = [];
   correo: any[] = [];
   public cordova:any;
+    
+
   constructor(private barcodeScanner: BarcodeScanner,
               private toastController:ToastController,
               private platform:Platform,
@@ -30,7 +33,9 @@ export class HomePage {
               public emailComposer:EmailComposer,
               public NitsServices:nitsServices,
               public iab:InAppBrowser,
-              public navCtrl: NavController) {}
+              public navCtrl: NavController,
+              private document: DocumentViewer,
+              public documentViewerOptions:DocumentViewerOptions) {}
             
             
 
@@ -174,20 +179,24 @@ export class HomePage {
    this.correo.push(
     {correo: 'afnarqui9@gmail.com'}
   )
+  const options: DocumentViewerOptions = {
+    title: 'My PDF'
+  }
+  this.document.viewDocument('assets/myFile.pdf', 'application/pdf', options)
 
-  const before = Date.now();
-  
+  // const before = Date.now();
+
               
-        this.mostrarToast('DEVICE READY FIRED AFTER'  + before + 'ms')
+        // this.mostrarToast('DEVICE READY FIRED AFTER'  + before + 'ms')
   
-                  this.cordova.plugins.pdf.htmlToPDF({
-                          data: "<html> <h1>  Hello World  </h1> </html>",
-                          documentSize: "A4",
-                          landscape: "portrait",
-                          type: "base64"
-                      },
-                      (sucess) => this.mostrarToast('sucess: '+ sucess),
-                      (error) => (sucess) => this.mostrarToast('error : '+ sucess))
+        //           this.cordova.plugins.pdf.htmlToPDF({
+        //                   data: "<html> <h1>  Hello World  </h1> </html>",
+        //                   documentSize: "A4",
+        //                   landscape: "portrait",
+        //                   type: "base64"
+        //               },
+        //               (sucess) => this.mostrarToast('sucess: '+ sucess),
+        //               (error) => (sucess) => this.mostrarToast('error : '+ sucess))
 
 
   }  
