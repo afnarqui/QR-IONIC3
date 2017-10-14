@@ -8,7 +8,7 @@ import { nitsServices } from '../../servicios/nits.services';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { NavController } from 'ionic-angular';
-import { DocumentViewer,DocumentViewerOptions } from '@ionic-native/document-viewer';
+import { DocumentViewer } from '@ionic-native/document-viewer';
 
 
 @Component({
@@ -34,8 +34,7 @@ export class HomePage {
               public NitsServices:nitsServices,
               public iab:InAppBrowser,
               public navCtrl: NavController,
-              private document: DocumentViewer,
-              public documentViewerOptions:DocumentViewerOptions) {}
+              private document: DocumentViewer) {}
             
             
 
@@ -179,9 +178,11 @@ export class HomePage {
    this.correo.push(
     {correo: 'afnarqui9@gmail.com'}
   )
-  const options: DocumentViewerOptions = {
+  const options: any = {
     title: 'My PDF'
   }
+
+
   this.document.viewDocument('assets/myFile.pdf', 'application/pdf', options)
 
   // const before = Date.now();

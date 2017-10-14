@@ -20,7 +20,7 @@ import { HttpModule } from '@angular/http';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { nitsServices } from '../servicios/nits.services';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { DocumentViewer,DocumentViewerOptions} from '@ionic-native/document-viewer';
+import { DocumentViewer} from '@ionic-native/document-viewer';
 
 
 @NgModule({
@@ -35,6 +35,7 @@ import { DocumentViewer,DocumentViewerOptions} from '@ionic-native/document-view
     NgxQRCodeModule,
     HttpModule,
     IonicModule
+    
     
   ],
   bootstrap: [IonicApp],
