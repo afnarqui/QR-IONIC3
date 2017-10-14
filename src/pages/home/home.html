@@ -17,7 +17,7 @@
   <ion-card *ngIf="createdCode">
        <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode> 
       <ion-card-content >
-          <p (click)="enviarcorreo2(createdCode)"> {{ createdCode }}</p>
+          <p (click)="enviarcorreo2("{{ createdCode }}")"> {{ createdCode }}</p>
       </ion-card-content>
   </ion-card>
 
