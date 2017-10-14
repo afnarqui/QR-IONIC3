@@ -207,15 +207,15 @@ export class HomePage {
   }
   ///+scannedCode+
   enviarcorreo2(){
-    let htmlLInk = "MATMSG:TO:afnarqui9@gmail.com;SUB:aja aja;BODY:dsfadfs;;";
+    let htmlLInk = "MATMSG:TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA;;";
     
-    htmlLInk = htmlLInk.replace("MATMSG:TO:","mailto:");
+    htmlLInk = htmlLInk.replace("MATMSG:TO","mailto:");
     htmlLInk = htmlLInk.replace(";SUB:", "?subject=");
     htmlLInk = htmlLInk.replace(";BODY:", "&body=");
     htmlLInk = htmlLInk.replace(";;", "");
     htmlLInk = htmlLInk.replace(/ /g, "%20");
     
-    console.log(htmlLInk);
+    this.mostrarToast(htmlLInk);
     
     this.iab.create( htmlLInk, "_system");
   }
