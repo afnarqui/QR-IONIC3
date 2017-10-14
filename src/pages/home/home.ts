@@ -179,9 +179,9 @@ export class HomePage {
     {correo: 'afnarqui9@gmail.com'}
   )
 
-
+  this.mostrarToast('antes del pdf')
   this.document.viewDocument('assets/myFile.pdf', 'application/pdf', {"title":"nose"})
-
+  this.mostrarToast('despues del pdf pdf')
   // const before = Date.now();
 
               
