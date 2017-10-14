@@ -237,7 +237,7 @@ export class HomePage {
   ///+scannedCode+
   enviarcorreo2(createdCode:any){
 
-    const options: DocumentViewerOptions = {
+    const options:DocumentViewerOptions = {
       title: "valores",
       documentView : {
           closeLabel : 'cerrar'
@@ -261,7 +261,7 @@ export class HomePage {
     options
   
     )
-    this.mostrarToast('despues del pdf pdf')
+    this.mostrarToast('despues del pdf')
 
     
 
