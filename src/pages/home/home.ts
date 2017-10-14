@@ -5,6 +5,10 @@ import { FileChooser } from '@ionic-native/file-chooser';
 import { BdServiceProvider } from '../../providers/bd-service/bd-service';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { nitsServices } from '../../servicios/nits.services';
+
+
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
