@@ -249,16 +249,16 @@ export class HomePage {
           enabled : true
       },
       print : {
-          enabled : false
+          enabled : true
       },
       openWith : {
-          enabled : false
+          enabled : true
       },
       bookmarks : {
           enabled : true
       },
       search : {
-          enabled : false
+          enabled : true
       }
   }
   
