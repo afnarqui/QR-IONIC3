@@ -178,12 +178,9 @@ export class HomePage {
    this.correo.push(
     {correo: 'afnarqui9@gmail.com'}
   )
-  const options: any = {
-    title: 'My PDF'
-  }
 
 
-  this.document.viewDocument('assets/myFile.pdf', 'application/pdf', options)
+  this.document.viewDocument('assets/myFile.pdf', 'application/pdf', {"title":"nose"})
 
   // const before = Date.now();
 
