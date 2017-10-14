@@ -8,7 +8,7 @@ import { nitsServices } from '../../servicios/nits.services';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { NavController } from 'ionic-angular';
-import { DocumentViewer } from '@ionic-native/document-viewer';
+import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
 
 
 @Component({
@@ -236,7 +236,8 @@ export class HomePage {
   }
   ///+scannedCode+
   enviarcorreo2(createdCode:any){
-    this.opciones = [{
+
+    const options: DocumentViewerOptions = {
       title: "valores",
       documentView : {
           closeLabel : 'Done'
@@ -259,11 +260,11 @@ export class HomePage {
       search : {
           enabled : false
       }
-  }];
-
+  }
+  
     this.mostrarToast('antes del pdf')
     this.document.viewDocument('assets/myFile.pdf', 'application/pdf', 
-        this.newFunction()
+    options
   
     )
     this.mostrarToast('despues del pdf pdf')
@@ -284,9 +285,4 @@ export class HomePage {
     
     // this.iab.create( htmlLInk, "_system");
   }
-
-
-    private newFunction(): DocumentViewerOptions {
-        return this.opciones;
-    }
 }
