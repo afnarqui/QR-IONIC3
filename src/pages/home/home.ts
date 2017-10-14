@@ -238,7 +238,7 @@ export class HomePage {
 
 
     this.mostrarToast('antes del pdf')
-    this.document.viewDocument('assets/myFile.pdf', 'application/pdf', {"title":"nose"})
+    this.document.viewDocument('assets/myFile.pdf', 'application/pdf', {"title":"nose funcione"})
     this.mostrarToast('despues del pdf pdf')
 
     
