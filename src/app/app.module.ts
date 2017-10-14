@@ -19,6 +19,8 @@ import { BdServiceProvider } from '../providers/bd-service/bd-service';
 import { HttpModule } from '@angular/http';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { nitsServices } from '../servicios/nits.services';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { nitsServices } from '../servicios/nits.services';
     SQLite,
     EmailComposer,
     nitsServices,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner,
     BdServiceProvider

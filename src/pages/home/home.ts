@@ -5,7 +5,7 @@ import { FileChooser } from '@ionic-native/file-chooser';
 import { BdServiceProvider } from '../../providers/bd-service/bd-service';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { nitsServices } from '../../servicios/nits.services';
-
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 
 
@@ -26,7 +26,8 @@ export class HomePage {
               public bdServiceProvider: BdServiceProvider,
               public alertController:AlertController,
               public emailComposer:EmailComposer,
-              public NitsServices:nitsServices) { }
+              public NitsServices:nitsServices,
+              public iab:InAppBrowser) { }
 
   crearQR() {
     this.createdCode = this.qrData;
@@ -200,6 +201,20 @@ export class HomePage {
      // Send a text message using default options
      this.emailComposer.open(email);
      this.mostrarToast('correo enviado con exito..')
+  }
+
+  enviarcorreo2(){
+    let htmlLInk = "MATMSG:TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA;;";
+    
+    htmlLInk = htmlLInk.replace("MATMSG:TO","mailto:");
+    htmlLInk = htmlLInk.replace(";SUB:", "?subject=");
+    htmlLInk = htmlLInk.replace(";BODY:", "&body=");
+    htmlLInk = htmlLInk.replace(";;", "");
+    htmlLInk = htmlLInk.replace(/ /g, "%20");
+    
+    console.log(htmlLInk);
+    
+    this.iab.create( htmlLInk, "_system");
   }
 
 }
