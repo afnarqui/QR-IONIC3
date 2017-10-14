@@ -240,25 +240,25 @@ export class HomePage {
     const options: DocumentViewerOptions = {
       title: "valores",
       documentView : {
-          closeLabel : 'Done'
+          closeLabel : 'cerrar'
       },
       navigationView : {
-          closeLabel : 'Close'
+          closeLabel : 'start'
       },
       email : {
-          enabled : true
+          enabled : false
       },
       print : {
           enabled : true
       },
       openWith : {
-          enabled : true
+          enabled : false
       },
       bookmarks : {
           enabled : true
       },
       search : {
-          enabled : true
+          enabled : false
       }
   }
   
