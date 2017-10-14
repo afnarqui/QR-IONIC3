@@ -15,9 +15,9 @@
   <button ion-button full icon-left (click)="scanQR()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan QR</button>
  
   <ion-card *ngIf="createdCode">
-       <ngx-qrcode [qrc-value]="enviarcorreo2("{{ createdCode }}")"></ngx-qrcode> 
+       <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode> 
       <ion-card-content >
-          <p> {{ createdCode }}</p>
+          <p (click)="enviarcorreo2(createdCode)"> {{ createdCode }}</p>
       </ion-card-content>
   </ion-card>
 
