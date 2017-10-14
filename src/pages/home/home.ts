@@ -179,9 +179,9 @@ export class HomePage {
   //   {correo: 'afnarqui9@gmail.com'}
   // )
 
-  this.mostrarToast('antes del pdf')
-  this.document.viewDocument('assets/myFile.pdf', 'application/pdf', {"title":"nose"})
-  this.mostrarToast('despues del pdf pdf')
+  // // this.mostrarToast('antes del pdf')
+  // // this.document.viewDocument('assets/myFile.pdf', 'application/pdf', {"title":"nose"})
+  // // this.mostrarToast('despues del pdf pdf')
   // const before = Date.now();
 
               
@@ -244,18 +244,18 @@ export class HomePage {
     
 
 
-    let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA2 "+createdCode+" ;;";
-    this.mostrarToast(htmlLInk);
-    ///MATMSG:TO
-    htmlLInk = htmlLInk.replace("TO:","mailto:");
-    htmlLInk = htmlLInk.replace(";SUB:", "?subject=");
-    htmlLInk = htmlLInk.replace(";BODY:", "&body=");
-    htmlLInk = htmlLInk.replace(";;", "");
-    htmlLInk = htmlLInk.replace(/ /g, "%20");
+    // let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA2 "+createdCode+" ;;";
+    // this.mostrarToast(htmlLInk);
+    // ///MATMSG:TO
+    // htmlLInk = htmlLInk.replace("TO:","mailto:");
+    // htmlLInk = htmlLInk.replace(";SUB:", "?subject=");
+    // htmlLInk = htmlLInk.replace(";BODY:", "&body=");
+    // htmlLInk = htmlLInk.replace(";;", "");
+    // htmlLInk = htmlLInk.replace(/ /g, "%20");
     
-    this.mostrarToast(htmlLInk);
+    // this.mostrarToast(htmlLInk);
     
-    this.iab.create( htmlLInk, "_system");
+    // this.iab.create( htmlLInk, "_system");
   }
 
 }
