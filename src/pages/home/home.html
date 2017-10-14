@@ -13,12 +13,10 @@
   </ion-item>
   <button ion-button full icon-left (click)="crearQR()"><ion-icon name="barcode"></ion-icon>Crear QR</button>
   <button ion-button full icon-left (click)="scanQR()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan QR</button>
-
+ <!-- <ngx-qrcode [qrc-value]="enviarcorreo2("{{ createdCode }}")"></ngx-qrcode>-->
   <ion-card *ngIf="createdCode">
-      <!-- <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode> -->
-      <ngx-qrcode [qrc-value]="enviarcorreo2("{{ createdCode }}")"></ngx-qrcode>
-      
-      <ion-card-content>
+      <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode> 
+      <ion-card-content (click)="enviarcorreo2("{{ createdCode }}")">
           <p> {{ createdCode }}</p>
       </ion-card-content>
   </ion-card>
