@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, NavController } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -22,16 +22,20 @@ import { nitsServices } from '../servicios/nits.services';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage
+    
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     NgxQRCodeModule,
-    HttpModule
+    HttpModule,
+    IonicModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,9 +50,11 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
     EmailComposer,
     nitsServices,
     InAppBrowser,
+    
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner,
     BdServiceProvider
+    
   ]
 })
 export class AppModule {}
