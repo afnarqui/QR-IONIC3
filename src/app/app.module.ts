@@ -35,7 +35,7 @@ import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-vi
     NgxQRCodeModule,
     HttpModule,
     IonicModule
-    
+
     
   ],
   bootstrap: [IonicApp],
@@ -52,7 +52,6 @@ import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-vi
     nitsServices,
     InAppBrowser,
     DocumentViewer,
-    DocumentViewerOptions,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner,
     BdServiceProvider
