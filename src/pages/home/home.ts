@@ -206,10 +206,10 @@ export class HomePage {
      this.mostrarToast('correo enviado con exito..')
   }
 
-  enviarcorreo2(){
-    let htmlLInk = "MATMSG:TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA;;";
+  enviarcorreo2(scannedCode){
+    let htmlLInk = "MATMSG:TO:afnarqui9@gmail.com;SUB:aja aja;BODY:"+scannedCode+";;";
     
-    htmlLInk = htmlLInk.replace("MATMSG:TO","mailto:");
+    htmlLInk = htmlLInk.replace("MATMSG:TO:","mailto:");
     htmlLInk = htmlLInk.replace(";SUB:", "?subject=");
     htmlLInk = htmlLInk.replace(";BODY:", "&body=");
     htmlLInk = htmlLInk.replace(";;", "");
