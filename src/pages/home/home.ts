@@ -207,7 +207,7 @@ export class HomePage {
   }
   ///+scannedCode+
   enviarcorreo2(createdCode:any){
-    let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA;;";
+    let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA "+createdCode+" ;;";
     this.mostrarToast(htmlLInk);
     ///MATMSG:TO
     htmlLInk = htmlLInk.replace("TO:","mailto:");
