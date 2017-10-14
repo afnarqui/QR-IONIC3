@@ -205,9 +205,9 @@ export class HomePage {
      this.emailComposer.open(email);
      this.mostrarToast('correo enviado con exito..')
   }
-
-  enviarcorreo2(scannedCode){
-    let htmlLInk = "MATMSG:TO:afnarqui9@gmail.com;SUB:aja aja;BODY:"+scannedCode+";;";
+  ///+scannedCode+
+  enviarcorreo2(scannedCode: any){
+    let htmlLInk = "MATMSG:TO:afnarqui9@gmail.com;SUB:aja aja;BODY:dsfadfs;;";
     
     htmlLInk = htmlLInk.replace("MATMSG:TO:","mailto:");
     htmlLInk = htmlLInk.replace(";SUB:", "?subject=");
