@@ -7,6 +7,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
 import { nitsServices } from '../../servicios/nits.services';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
+import { NavController } from 'ionic-angular';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class HomePage {
   scannedCode = null;
   nits: any[] = [];
   correo: any[] = [];
-  cordova:any;
+  public cordova:any;
   constructor(private barcodeScanner: BarcodeScanner,
               private toastController:ToastController,
               private platform:Platform,
@@ -28,7 +29,29 @@ export class HomePage {
               public alertController:AlertController,
               public emailComposer:EmailComposer,
               public NitsServices:nitsServices,
-              public iab:InAppBrowser) { }
+              public iab:InAppBrowser,
+              public navCtrl: NavController) { 
+
+             
+                const before = Date.now();
+          
+                      document.addEventListener('deviceready', () => {
+                          console.log('DEVICE READY FIRED AFTER', (Date.now() - before), 'ms');
+          
+                          this.cordova.plugins.pdf.htmlToPDF({
+                                  data: "<html> <h1>  Hello World  </h1> </html>",
+                                  documentSize: "A4",
+                                  landscape: "portrait",
+                                  type: "base64"
+                              },
+                              (sucess) => console.log('sucess: ', sucess),
+                              (error) => console.log('error:', error));
+                      });
+          
+             
+            }
+            
+            
 
   crearQR() {
     this.createdCode = this.qrData;
