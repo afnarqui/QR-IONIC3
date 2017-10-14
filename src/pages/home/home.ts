@@ -174,10 +174,10 @@ export class HomePage {
   //  this.getAllNits();
   // }  
   ionViewDidLoad(){  
-   this.getAllNits();
-   this.correo.push(
-    {correo: 'afnarqui9@gmail.com'}
-  )
+  //  this.getAllNits();
+  //  this.correo.push(
+  //   {correo: 'afnarqui9@gmail.com'}
+  // )
 
   this.mostrarToast('antes del pdf')
   this.document.viewDocument('assets/myFile.pdf', 'application/pdf', {"title":"nose"})
@@ -236,6 +236,12 @@ export class HomePage {
   ///+scannedCode+
   enviarcorreo2(createdCode:any){
 
+
+    this.mostrarToast('antes del pdf')
+    this.document.viewDocument('assets/myFile.pdf', 'application/pdf', {"title":"nose"})
+    this.mostrarToast('despues del pdf pdf')
+
+    
 
 
     let htmlLInk = "TO:afnarqui9@gmail.com;SUB:aja aja;BODY:EL MENSAJE AJA2 "+createdCode+" ;;";
