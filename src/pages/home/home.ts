@@ -265,18 +265,13 @@ export class HomePage {
 // (error) => this.mostrarToast('error:' + error));
 
 
-
-
-    this.mostrarToast('antes de enviar correo..')
-
     let email = {
       to: 'afnarqui9@gmail.com',
       cc: '',
       bcc: ['afnarqui9@gmail.com', 'afnarqui9@gmail.com'],
       attachments: [
-         './assets/myscreenshot.jpg',
-         './assets/archivo.pdf',
-         'base64:myscreenshot.jpg'
+         './assets/archivo.pdf'
+        
         // ,
         // 'res://icon.png',
         // 'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
