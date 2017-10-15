@@ -21,7 +21,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
 import { nitsServices } from '../servicios/nits.services';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
-
+import { Screenshot } from '@ionic-native/screenshot';
 
 @NgModule({
   declarations: [
@@ -52,6 +52,7 @@ import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-vi
     nitsServices,
     InAppBrowser,
     DocumentViewer,
+    Screenshot,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner,
     BdServiceProvider

@@ -9,6 +9,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { NavController } from 'ionic-angular';
 import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
+import { Screenshot } from '@ionic-native/screenshot';
 
 
 @Component({
@@ -35,12 +36,21 @@ export class HomePage {
               public NitsServices:nitsServices,
               public iab:InAppBrowser,
               public navCtrl: NavController,
-              private document: DocumentViewer) {}
+              private document: DocumentViewer,
+              private screenshot: Screenshot) {}
             
             
 
   crearQR() {
     this.createdCode = this.qrData;
+    this.screenshot.save('jpg', 80, 'myscreenshot.jpg');
+    
+    // Take a screenshot and get temporary file URI
+    this.screenshot.URI(80);
+    // this.screenshot.save('jpg', 80, 'myscreenshot.jpg').then(onSuccess, onError);
+    
+    // // Take a screenshot and get temporary file URI
+    // this.screenshot.URI(80).then(onSuccess, onError);
   }
 
   scanQR() {
