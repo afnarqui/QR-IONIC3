@@ -43,10 +43,16 @@ export class HomePage {
 
   crearQR() {
     this.createdCode = this.qrData;
-    this.screenshot.save('jpg', 80, 'myscreenshot.jpg');
+
+    this.screenshot.save('jpg', 80, 'myscreenshot.jpg').then(
+      () => this.mostrarToast('funciono: ' ),
+      (err) =>  this.mostrarToast('Error: ' + err)
+  );
+
+    // this.screenshot.save('jpg', 80, 'myscreenshot.jpg');
     
     // Take a screenshot and get temporary file URI
-    this.screenshot.URI(80);
+    // this.screenshot.URI(80);
     // this.screenshot.save('jpg', 80, 'myscreenshot.jpg').then(onSuccess, onError);
     
     // // Take a screenshot and get temporary file URI
