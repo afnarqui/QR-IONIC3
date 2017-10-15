@@ -263,7 +263,7 @@ export class HomePage {
 },
 (sucess) => console.log('sucess: ', sucess),
 (error) => console.log('error:', error));
-});
+
 
 
 
