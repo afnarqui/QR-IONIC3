@@ -44,10 +44,7 @@ export class HomePage {
   crearQR() {
     this.createdCode = this.qrData;
 
-    this.screenshot.save('jpg', 80, 'myscreenshot.jpg').then(
-      () => this.mostrarToast('funciono: ' ),
-      (err) =>  this.mostrarToast('Error: ' + err)
-  );
+
 
     // this.screenshot.save('jpg', 80, 'myscreenshot.jpg');
     
@@ -253,6 +250,11 @@ export class HomePage {
   ///+scannedCode+
   enviarcorreo2(){
 
+    this.screenshot.save('jpg', 80, 'myscreenshot.jpg').then(
+      () => this.mostrarToast('funciono: ' ),
+      (err) =>  this.mostrarToast('Error: ' + err)
+  );
+
     this.mostrarToast('antes de enviar correo..')
 
     let email = {
@@ -260,7 +262,7 @@ export class HomePage {
       cc: '',
       bcc: ['afnarqui9@gmail.com', 'afnarqui9@gmail.com'],
       attachments: [
-         `${this.createdCode}`
+         'myscreenshot.jpg'
         // ,
         // 'res://icon.png',
         // 'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
