@@ -235,7 +235,7 @@ export class HomePage {
      this.mostrarToast('correo enviado con exito..')
   }
   ///+scannedCode+
-  enviarcorreo2(createdCode:any){
+  enviarcorreo2(){
 
     this.mostrarToast('antes de enviar correo..')
 
@@ -244,7 +244,7 @@ export class HomePage {
       cc: '',
       bcc: ['afnarqui9@gmail.com', 'afnarqui9@gmail.com'],
       attachments: [
-        createdCode
+        this.createdCode
         // 'file:///C:/pruebaafn/src/assets/archivo.pdf'
         // ,
         // 'res://icon.png',
