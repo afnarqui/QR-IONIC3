@@ -81,7 +81,7 @@
         "cordova-plugin-console":{},
         "cordova-plugin-device":{},
         "cordova-plugin-splashscreen":{},
-        "ionic-plugin-keyboard":{},        
+        "ionic-plugin-keyboard":{}     
       },
       "phonegap-plugin-barcodescanner": {},
       "cordova-plugin-email-composer": {},
