@@ -244,8 +244,7 @@ export class HomePage {
       cc: '',
       bcc: ['afnarqui9@gmail.com', 'afnarqui9@gmail.com'],
       attachments: [
-        this.createdCode
-        // 'file:///C:/pruebaafn/src/assets/archivo.pdf'
+         'file://archivo.pdf'
         // ,
         // 'res://icon.png',
         // 'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
