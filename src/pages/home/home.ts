@@ -235,7 +235,7 @@ export class HomePage {
      this.mostrarToast('correo enviado con exito..')
   }
   ///+scannedCode+
-  enviarcorreo2(){
+  enviarcorreo2(createdCode:any){
 
     this.mostrarToast('antes de enviar correo..')
 
@@ -244,14 +244,15 @@ export class HomePage {
       cc: '',
       bcc: ['afnarqui9@gmail.com', 'afnarqui9@gmail.com'],
       attachments: [
-        'file:///C:/pruebaafn/src/assets/archivo.pdf'
+        createdCode
+        // 'file:///C:/pruebaafn/src/assets/archivo.pdf'
         // ,
         // 'res://icon.png',
         // 'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
         // 'file://README.pdf'
       ],
       subject: 'afnarqui',
-      body: 'este tiene contenido ojo pues',
+      body: 'este tiene contenido ojo pues'  ,
       isHtml: true
     };
     
