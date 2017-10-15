@@ -73,7 +73,15 @@
       "cordova-plugin-ionic": {
         "APP_ID": "550d99be",
         "CHANNEL_NAME": "Master",
-        "UPDATE_METHOD": "background"
+        "UPDATE_METHOD": "background",
+
+
+        "cordova-plugin-whitelist":{},
+        "cordova-plugin-statusbar":{},
+        "cordova-plugin-console":{},
+        "cordova-plugin-device":{},
+        "cordova-plugin-splashscreen":{},
+        "ionic-plugin-keyboard":{},        
       },
       "phonegap-plugin-barcodescanner": {},
       "cordova-plugin-email-composer": {},
