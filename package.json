@@ -86,13 +86,6 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-document-viewer": {},
       "com.darktalker.cordova.screenshot": {}
-
-      ,
-
-
-  
-   
-      "cordova-plugin-console":{}
     
     },
     "platforms": [
