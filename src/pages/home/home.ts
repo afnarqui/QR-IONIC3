@@ -261,8 +261,8 @@ export class HomePage {
     landscape: "portrait",
     type: "base64"
 },
-(sucess) => console.log('sucess: ', sucess),
-(error) => console.log('error:', error));
+(sucess) => this.mostrarToast('sucess: ' + sucess),
+(error) => this.mostrarToast('error:' + error));
 
 
 
