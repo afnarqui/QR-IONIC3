@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporteador</title>
+</head>
+<body>
+    
+    
+    <a id="reporte"></a>
+    
+    
+    <script src="script.js"></script>
+    <script>       
+        
+        var a = document.getElementById("reporte");
+        var tipo = "docx";
+        var params = {
+            email:{
+              para:"sergiogeek7@gmail.com",
+              asunto:"reporter",
+              texto:"esto es increhible .... mira el adjunto"
+            },
+            plantilla:"ejemplo3",
+            exportar:tipo,
+            "data": [
+            {
+                "nombre":"Sergio",
+                "apellido":"Arboleda",
+                "anos" : "22",
+                "tel":"123123123",
+                "dir":"Cr 87 N 92-c32"
+            },
+            {
+                "nombre":"Jhoana",
+                "apellido":"Arboleda",
+                "anos" : "21",
+                "tel":"123123123",
+                "dir":"Cr 87 N 92-c32"
+            },
+            {
+                "nombre":"Mariana",
+                "apellido":"Arboleda",
+                "anos" : "24",
+                "tel":"123123123",
+                "dir":"Cr 87 N 92-c32"
+            },
+            {
+                "nombre":"Juan",
+                "apellido":"Arboleda",
+                "anos" : "25",
+                "tel":"123123123",
+                "dir":"Cr 87 N 92-c32"
+            },
+            {
+                "nombre":"Hilda",
+                "apellido":"Arboleda",
+                "anos" : "26",
+                "tel":"123123123",
+                "dir":"Cr 87 N 92-c32"
+            },
+            {
+                "nombre":"Andres",
+                "apellido":"Arboleda",
+                "anos" : "26",
+                "tel":"123123123",
+                "dir":"Cr 87 N 92-c32"
+            },
+            {
+                "nombre":"Mari",
+                "apellido":"Arboleda",
+                "anos" : "20",
+                "tel":"123123123",
+                "dir":"Cr 87 N 92-c32"
+            }    
+            ]
+        };
+        
+        
+             request("http://localhost:3333/reporte","POST","blob",params)
+                .then((response)=>{
+                     
+                    var url = window.URL.createObjectURL(response);
+                    a.href = url;
+                    a.download = "data."+tipo;
+                    a.click();
+                })
+                .catch(console.log.bind(console));
+        
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>

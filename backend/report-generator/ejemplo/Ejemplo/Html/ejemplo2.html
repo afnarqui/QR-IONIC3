@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporteador</title>
+</head>
+<body>
+    
+    
+    <a id="reporte"></a>
+    
+    
+    <script src="script.js"></script>
+    <script>       
+        
+        var a = document.getElementById("reporte");
+        var tipo = "csv";
+        request("http://localhost:4000/public/api/Consulta/Creditos")
+                .then((response)=>{
+                    
+                    var params = {
+                        data:response,
+                        vars:{
+                            nombreEntidad:"Fondo Opa",
+                            nombreAsocidado: "Sergio Andres Arboleda",
+                            tipoProducto:"Credito"
+                        }
+                    };
+                    return request("http://localhost:3333","POST","blob",tipo,params);
+                })
+                .then((response)=>{
+                     
+                    var url = window.URL.createObjectURL(response);
+                    a.href = url;
+                    a.download = "data."+tipo;
+                    a.click();
+                })
+                .catch(console.log.bind(console));
+        
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>

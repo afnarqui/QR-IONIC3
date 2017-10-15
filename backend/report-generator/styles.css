@@ -1,0 +1,25 @@
+thead{
+
+   text-transform: capitalize;
+   font-size: 12px;
+}
+
+table{
+   width: 100%;
+}
+
+body{
+    margin: 50px;
+}
+
+.texto-centro{
+     text-align: left;
+}
+
+.texto-derecha{
+     text-align: left;
+}
+
+p{
+    font-size: 14px;
+}

@@ -1,0 +1,1 @@
+"use strict";var fs=require("fs");module.exports={write:function(r,e){return new Promise(function(n,t){return e.pipe?(e.pipe(fs.createWriteStream(r)),e.on("end",function(){return n(r)}),void e.on("error",function(r){return t(r)})):void fs.writeFile(r,e,function(e){return e?t(e):void n(r)})})}};

@@ -1,0 +1,1 @@
+"use strict";var http=require("http"),dataset=require("./dataset"),xmlParser=require("js2xmlparser");http.createServer(function(e,t){return t.setHeader("Content-Type","text/xml"),t.end(xmlParser("result",{row:dataset}))}).listen(4e3);

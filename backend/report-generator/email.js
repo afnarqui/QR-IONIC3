@@ -1,0 +1,1 @@
+"use strict";var nodemailer=require("nodemailer"),config=require("./config.json");module.exports=function(e){e=e||config.email;var r=nodemailer.createTransport(e);return{sendMail:function(n,i){var o=e.auth.from;n.from=o,r.sendMail(n,i)}}};

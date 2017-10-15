@@ -1,0 +1,1 @@
+"use strict";function toHtml(t){return mammoth.convertToHtml({path:t},op).then(function(t){return t.value})}var mammoth=require("mammoth"),path=require("path"),fs=require("fs"),op={styleMap:["u => em","p[style-name='texto-centro'] => p.texto-centro:fresh","p[style-name='texto-derecha'] => p.texto-derecha:fresh"]};module.exports=toHtml;

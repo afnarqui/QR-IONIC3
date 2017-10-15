@@ -1,0 +1,1 @@
+"use strict";var fs=require("fs"),path=require("path"),style=fs.readFileSync(path.join(__dirname,"styles.css"),"utf-8");style="<style>"+style+"</style>",module.exports=style;

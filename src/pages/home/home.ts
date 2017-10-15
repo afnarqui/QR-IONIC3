@@ -235,33 +235,56 @@ export class HomePage {
      this.mostrarToast('correo enviado con exito..')
   }
   ///+scannedCode+
-  enviarcorreo2(createdCode:any){
+  enviarcorreo2(){
 
-    const options:DocumentViewerOptions = {
-      title: "valores",
-      documentView : {
-          closeLabel : 'cerrar'
-      },
-      navigationView : {
-          closeLabel : 'start'
-      },
+    this.mostrarToast('antes de enviar correo..')
 
-      print : {
-          enabled : true
-      },
+    let email = {
+      to: 'afnarqui9@gmail.com',
+      cc: '',
+      bcc: ['afnarqui9@gmail.com', 'afnarqui9@gmail.com'],
+      attachments: [
+        'file://assets/archivo.pdf'
+        // ,
+        // 'res://icon.png',
+        // 'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
+        // 'file://README.pdf'
+      ],
+      subject: 'Cordova Icons',
+      body: 'How are you? Nice greetings from Leipzig',
+      isHtml: true
+    };
+    
+    // Send a text message using default options
+    this.emailComposer.open(email);
+    this.mostrarToast('despues de enviar correo..')
 
-      bookmarks : {
-          enabled : true
-      }
 
-  }
+  //   const options:DocumentViewerOptions = {
+  //     title: "valores",
+  //     documentView : {
+  //         closeLabel : 'cerrar'
+  //     },
+  //     navigationView : {
+  //         closeLabel : 'start'
+  //     },
+
+  //     print : {
+  //         enabled : true
+  //     },
+
+  //     bookmarks : {
+  //         enabled : true
+  //     }
+
+  // }
   
-    this.mostrarToast('antes del pdf')
-    this.document.viewDocument('assets/myFile.pdf', 'application/pdf', 
-    options
+  //   this.mostrarToast('antes del pdf')
+  //   this.document.viewDocument('assets/myFile.pdf', 'application/pdf', 
+  //   options
   
-    )
-    this.mostrarToast('despues del pdf')
+  //   )
+  //   this.mostrarToast('despues del pdf')
 
     
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+   
+   
+   <script>
+    
+    
+    function unionObject (item) {
+        var keys  = Object.keys(item);
+
+        for (var i = keys.length-1; i > -1 ; i--) {
+            this[keys[i]] = item[keys[i]];
+        }
+    }
+    // e.union({a:"oe",b:"ea"})
+    Object.prototype.union = unionObject;
+    
+    var e = {};
+    
+    
+    </script> 
+</body>
+</html>

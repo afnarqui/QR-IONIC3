@@ -1,0 +1,1 @@
+"use strict";function replaceVars(r){return function(e){for(var n in r)e=replaceAll(e,"#"+n+"#",r[n]);return e}}function replaceAll(r,e,n){for(;r.indexOf(e)>-1;)r=r.replace(e,n);return r}module.exports=replaceVars;

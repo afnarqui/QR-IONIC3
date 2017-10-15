@@ -1,0 +1,18 @@
+{
+    "servicePort":3333,
+    "plantillas": {
+        "docx" :"C:\\reportgenerator\\ejemplo\\Word\\",
+        "csv"  : "C:\\reportgenerator\\ejemplo\\Excel\\",
+        "txt"  : "C:\\reportgenerator\\ejemplo\\Txt\\"
+    },
+    "email":{
+        "host": "smtp.gmail.com",
+        "port": 465,
+        "secure": true,
+        "auth": {
+            "user": "opasasco@gmail.com",
+            "pass": "password1.",
+            "from":"opasas@gmail.com"
+        }
+    }
+}

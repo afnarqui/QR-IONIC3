@@ -1,0 +1,1 @@
+"use strict";function prepareParams(r){return a="",b="",{a:a,b:b}}function s(){arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";return a="",b="",{a:a,b:b}}a=prepareParams(),console.log(a);

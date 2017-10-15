@@ -1,0 +1,19 @@
+Fecha Sistema: #fechasistema#                                                                                                     Hora : #horasistema#
+Fecha Trabajo: #fechatrabajo#                                                                                                 
+Total Registros: #totalregistros#
+
+                                    #nombreagencia#
+                                                                  #nombreinforme#
+
+
+
+#DATAREPORTE#
+
+
+
+
+#hola#
+
+
+
+#DATAREPORTE#
