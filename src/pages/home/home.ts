@@ -255,6 +255,18 @@ export class HomePage {
       (err) =>  this.mostrarToast('Error: ' + err)
   );
 
+  this.cordova.plugins.pdf.htmlToPDF({
+    data: "<html> <h1>  Hello World  </h1> </html>",
+    documentSize: "A4",
+    landscape: "portrait",
+    type: "base64"
+},
+(sucess) => console.log('sucess: ', sucess),
+(error) => console.log('error:', error));
+});
+
+
+
     this.mostrarToast('antes de enviar correo..')
 
     let email = {
