@@ -255,14 +255,14 @@ export class HomePage {
       (err) =>  this.mostrarToast('Error: ' + err)
   );
 
-  this.cordova.plugins.pdf.htmlToPDF({
-    data: "<html> <h1>  Hello World  </h1> </html>",
-    documentSize: "A4",
-    landscape: "portrait",
-    type: "base64"
-},
-(sucess) => this.mostrarToast('sucess: ' + sucess),
-(error) => this.mostrarToast('error:' + error));
+//   this.cordova.plugins.pdf.htmlToPDF({
+//     data: "<html> <h1>  Hello World  </h1> </html>",
+//     documentSize: "A4",
+//     landscape: "portrait",
+//     type: "base64"
+// },
+// (sucess) => this.mostrarToast('sucess: ' + sucess),
+// (error) => this.mostrarToast('error:' + error));
 
 
 
@@ -274,7 +274,9 @@ export class HomePage {
       cc: '',
       bcc: ['afnarqui9@gmail.com', 'afnarqui9@gmail.com'],
       attachments: [
-         'assets/myscreenshot.jpg'
+         './assets/myscreenshot.jpg',
+         './assets/archivo.pdf',
+         'base64:myscreenshot.jpg'
         // ,
         // 'res://icon.png',
         // 'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
