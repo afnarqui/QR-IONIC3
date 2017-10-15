@@ -244,14 +244,14 @@ export class HomePage {
       cc: '',
       bcc: ['afnarqui9@gmail.com', 'afnarqui9@gmail.com'],
       attachments: [
-        'file://assets/archivo.pdf'
+        'file:///C:/pruebaafn/src/assets/archivo.pdf'
         // ,
         // 'res://icon.png',
         // 'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
         // 'file://README.pdf'
       ],
-      subject: 'Cordova Icons',
-      body: 'How are you? Nice greetings from Leipzig',
+      subject: 'afnarqui',
+      body: 'este tiene contenido ojo pues',
       isHtml: true
     };
     
