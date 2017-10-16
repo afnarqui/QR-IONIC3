@@ -24,9 +24,9 @@ app.get('/reporte', function(req, res) {
     doc.pipe(res);
 
     // Process image
-    console.log( `file://${require.resolve('./certificado.jpg')}`)
+    
     request({
-        url: `file://${require.resolve('./certificado.jpg')}`,
+        url: "https://firebasestorage.googleapis.com/v0/b/geo9-17cbe.appspot.com/o/img%2F1504892415004?alt=media&token=244c0256-7955-47b7-9c9a-d09b61de0e40",
         encoding: null // Prevents Request from converting response to string
     }, function(err, response, body) {
         if (err) throw err;

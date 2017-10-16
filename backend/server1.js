@@ -71,12 +71,12 @@ app.get('/reporte',function(req, res) {
         
         <p>hola a todos aca el título</p>
      
-        <img id="imagen" width=100% height=293 src="https://preview.ibb.co/eoukQm/certificado_Arriba.png" alt="certificado_Arriba" border="0">    
+        <img id="imagen" width=100% height=293 src="http://4.bp.blogspot.com/-_18AElD7MMo/UofarY9HYBI/AAAAAAAACIs/DT89R-NObB0/s1600/imagenes+en+HD+(25).jpg">    
        </br>
        <p><p>aca el nombre de la persona</p></p>
 
 
-       <img id="imagen" width=100% height=293 src="https://firebasestorage.googleapis.com/v0/b/geo9-17cbe.appspot.com/o/img%2F1504892415004?alt=media&token=244c0256-7955-47b7-9c9a-d09b61de0e40">    
+       <img id="imagen" width=100% height=293 src="http://4.bp.blogspot.com/-_18AElD7MMo/UofarY9HYBI/AAAAAAAACIs/DT89R-NObB0/s1600/imagenes+en+HD+(25).jpg">    
     </body>
     </html>
     `
